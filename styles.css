@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #36393F;
+    color: #DCDDDE;
+    padding: 1em;
+}
+
+form {
+    margin-bottom: 1em;
+    background-color: #2F3136;
+    padding: 1em;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+    align-self: flex-start;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    background-color: #40444B;
+    border: none;
+    color: #DCDDDE;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+input[type="submit"] {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #7289DA;
+    border: none;
+    color: #DCDDDE;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #677BC4;
+}
+
+input[type="submit"].clicked {
+    animation: clickAnimation 0.4s ease;
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#status {
+    color: #43B581;
+    text-align: center;
+    margin-top: 1em;
+}
+
+@media (min-width: 600px) {
+    input[type="submit"] {
+        width: auto;
+        display: inline-block;
+    }
+}
+
+body::after {
+    content: "@Cronbo 2024";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+    font-size: 3em;
+    z-index: 9999;
+    color: #DCDDDE;
+}
